@@ -1,6 +1,29 @@
 header.header
-  img.header__1(src="./img/BG_Content.webp")
-  img.header__2(src="./img/BG_Hero.webp")
-  img.header__3(src="./img/HG.webp")
-  img.header__4(src="./img/MG.webp")
-  img.header__5(src="./img/VG.webp")
+  img.header__bg.header__1(src="./img/BG_Content.webp")
+  img.header__bg.header__2(src="./img/BG_Hero.webp")
+  img.header__bg.header__3(src="./img/HG.webp")
+  img.header__bg.header__4(src="./img/MG.webp")
+  img.header__bg.header__5(src="./img/VG.webp")
+  section.header__content.content#start
+    section.content__header
+      p.content__logo mntn 
+      nav.content__navigation.navigation
+        a.navigation__item Equipment
+        a.navigation__item About us
+        a.navigation__item Blog
+      a.content__account(href='#')
+        p.account__text Account
+    section.content__body
+      section.social
+        p.social__text Follow us
+        a.social__icon.social__icon--instagram(href='#')
+        a.social__icon.social__icon--twitter(href='#')
+      div.title 
+        p.title__undertitle A Hiking guide
+        h1.title__h1 Be prepared for the<br> Mountains and beyond!
+        a.title__scrolldown(href="#01") scroll down
+      menu.menu
+        a.menu__item.menu__item--active(href="#start") Start
+        a.menu__item(href="#01") 01
+        a.menu__item(href="#02") 02
+        a.menu__item(href="#03") 03
