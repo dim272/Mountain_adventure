@@ -254,13 +254,17 @@ a {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; }
+  align-items: stretch; }
   .footer__info {
     flex: 2;
-    height: 8rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
+  .footer__text {
+    margin-top: 20px; }
+  .footer__copyright {
+    font-weight: 300;
+    font-size: 0.7rem; }
   .footer__navigation {
     flex: 1;
     display: flex;

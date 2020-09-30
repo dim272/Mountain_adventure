@@ -325,13 +325,19 @@ a {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
   &__info {
     flex: 2;
-    height: 8rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+  &__text {
+    margin-top: 20px;
+  }
+  &__copyright {
+    font-weight: 300;
+    font-size: 0.7rem;
   }
   &__navigation {
     flex: 1;
