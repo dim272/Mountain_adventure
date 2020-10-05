@@ -153,17 +153,24 @@ a {
 .menu {
   position: fixed;
   right: 3rem;
+  width: 5rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   &__item {
-    text-align: right;
-    padding: 1rem;
-    width: 5rem;
-    height: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 2.5rem;
     font-weight: bold;
     color: rgba(255,255,255, 0.5);
     border-right: 3px solid rgba(255,255,255, 0.5);
+     & > p {
+       padding: 0 10px;
+     }
     &--active, &:hover {
       color: rgba(255,255,255, 0.95);
       border-right: 3px solid rgba(255,255,255, 0.95);
@@ -223,7 +230,7 @@ a {
           bottom: 8px;
           width: 9px;
           border: 2px solid $white;
-          transform: rotate(90deg) translateY(0.5px);
+          transform: rotate(90deg) translateY(1px);
         }
     }
 }
@@ -237,6 +244,7 @@ a {
 
   &__block {
     max-width: 1462px;
+    max-height: 90vh; //for js
     margin: 50px auto;
     display: flex;
     justify-content: center;

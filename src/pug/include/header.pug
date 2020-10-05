@@ -4,7 +4,7 @@ header.header
   img.header__bg.header__3.parallax(src="./img/HG.webp" data-speed="0.2")
   img.header__bg.header__4.parallax(src="./img/MG.webp" data-speed="-0.1")
   img.header__bg.header__5.parallax(src="./img/VG.webp" data-speed="0.1")
-  section.header__content.content#start
+  section.header__content.content.blocks-js#block1
     section.content__header
       p.content__logo mntn 
       nav.content__navigation.navigation
@@ -21,9 +21,13 @@ header.header
       div.title.parallax(data-speed="0.2")
         p.title__undertitle A Hiking guide
         h1.title__h1 Be prepared for the<br> Mountains and beyond!
-        a.title__scrolldown(href="#01") scroll down
+        a.title__scrolldown.anchor-js(href="#block2") scroll down slowly
       menu.menu
-        a.menu__item.menu__item--active(href="#start") Start
-        a.menu__item(href="#01") 01
-        a.menu__item(href="#02") 02
-        a.menu__item(href="#03") 03
+        a.menu__item.menu__item--active.anchor-js(href="#block1")#anchor1 
+          p Start
+        a.menu__item.anchor-js(href="#block2")#anchor2
+          p 01
+        a.menu__item.anchor-js(href="#block3")#anchor3 
+          p 02
+        a.menu__item.anchor-js(href="#block4")#anchor4
+          p 03
