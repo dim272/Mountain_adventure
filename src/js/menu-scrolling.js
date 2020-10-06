@@ -1,6 +1,3 @@
-let blockId = ["block1","block2","block3","block4"];
-let anchorId = ["anchor1","anchor2","anchor3","anchor4"];
-
 isVisible = (el) =>  {
   console.log(el);
   let elementBoundary = el.getBoundingClientRect;
