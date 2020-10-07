@@ -1,22 +1,23 @@
-let blockId = ["block1","block2","block3","block4"];
-let anchorId = ["anchor1","anchor2","anchor3","anchor4"];
-
 isVisible = (el) =>  {
 
-  let target = document.getElementById(`${el}`),
-      targetBoundary = target.getBoundingClientRect();
+  let target          = document.getElementById(el),
+      targetBoundary  = target.getBoundingClientRect(),
+      top             = targetBoundary.top,
+      bottom          = targetBoundary.bottom;
 
-  return ((targetBoundary.top >= 0) && (targetBoundary.bottom <= window.innerHeight));
+  return ((top >= 0) && (bottom <= window.innerHeight));
 }
 
-window.addEventListener("scroll", () => {
-  for (let i=0; i<blockId.length; i++) {
-    if (isVisible(`block${i+1}`)) {
-      let activeMenuItem = document.getElementsByClassName("menu__item--active"),
-          activeMenuItemId = activeMenuItem[0].id,
-          newActiveMenuItem = document.getElementById(`anchor${i+1}`);
+let blocksAmount = document.getElementsByClassName('blocks-js').length;
 
-      document.getElementById(activeMenuItemId).classList.remove("menu__item--active");
+
+window.addEventListener("scroll", () => {
+  for (let i=0; i<blocksAmount; i++) {
+    if (isVisible(`block${i+1}`)) {
+
+      activeMenuItem = document.getElementsByClassName("menu__item--active");
+      activeMenuItem[0].classList.remove("menu__item--active");
+      
       document.getElementById(`anchor${i+1}`).classList.add("menu__item--active");
     } else {
       continue

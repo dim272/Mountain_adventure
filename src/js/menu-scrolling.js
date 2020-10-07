@@ -1,19 +1,24 @@
 isVisible = (el) =>  {
-  console.log(el);
-  let elementBoundary = el.getBoundingClientRect;
 
-  let top = elementBoundary.top;
-  let bottom = elementBoundary.bottom;
+  let target          = document.getElementById(el),
+      targetBoundary  = target.getBoundingClientRect(),
+      top             = targetBoundary.top,
+      bottom          = targetBoundary.bottom;
 
   return ((top >= 0) && (bottom <= window.innerHeight));
 }
 
+let blocksAmount = document.getElementsByClassName('blocks-js').length;
+
+
 window.addEventListener("scroll", () => {
-  for (let i=0; i<blockId.length; i++) {
-    if (isVisible(`block${i}`)) {
-      console.log(i)
-      document.getElementsByClassName("anchor-js").classList.remove(".menu__item--active");
-      document.getElementById("anchor"+i).classList.add(".menu__item--active");
+  for (let i=0; i<blocksAmount; i++) {
+    if (isVisible(`block${i+1}`)) {
+
+      activeMenuItem = document.getElementsByClassName("menu__item--active");
+      activeMenuItem[0].classList.remove("menu__item--active");
+      
+      document.getElementById(`anchor${i+1}`).classList.add("menu__item--active");
     } else {
       continue
     }
